@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis:/data
+      - ./redis-dump:/var/lib/redis
+    restart: unless-stopped
+    # network_mode: host

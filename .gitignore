@@ -125,3 +125,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+mariadb/data/**
+!mariadb/data/.gitkeep
+
+redis/redis-dump/**
+!redis/redis-dump/.gitkeep
+
+redis/redis/**
+!redis/redis/.gitkeep

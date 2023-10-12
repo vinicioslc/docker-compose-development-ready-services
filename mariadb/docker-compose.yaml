@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+  mariadb:
+    image: mariadb:10.7
+    container_name: mariadb
+    volumes:
+    # create persistent docker volume
+    - ./data:/var/lib/mysql
+    # mount configuration
+    - ./config/:/etc/mysql/conf.d
+    # network_mode: "host"
+    ports:
+      - 3306:3306
+    restart: unless-stopped
+    environment:
+    # - MYSQL_ROOT_HOST: localhost
+      MARIADB_ROOT_HOST: '%'
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_USER: user
+      MYSQL_PASSWORD:
+      MYSQL_DATABASE: default_db
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u user --password=
