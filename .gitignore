@@ -134,3 +134,5 @@ redis/redis-dump/**
 
 redis/redis/**
 !redis/redis/.gitkeep
+grocy/config/**
+!grocy/config/.gitkeep
