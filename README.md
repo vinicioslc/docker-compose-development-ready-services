@@ -5,10 +5,11 @@
 Every service should use a unique port to avoid conflicts and allow spinup all services
 to make easy this is a list about services using ports.
 
-| Name    | port  |
-| :------ | :---: |
-| mariadb | 3306  |
-| redis   | 6379  |
+| Name    | port  | user | password |
+| :------ | :---: | :---:| --- |
+| mariadb | 3306  | root | root |
+| redis   | 6379  |   | root |
+| mongodb | 27017  |root | root |
 
 ## Objective
 
