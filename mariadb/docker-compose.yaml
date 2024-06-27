@@ -5,7 +5,7 @@ services:
     container_name: mariadb
     volumes:
     # create persistent docker volume
-    - ./data:/var/lib/mysql
+    - mariadb-persistent:/var/lib/mysql
     # mount configuration
     - ./config/:/etc/mysql/conf.d
     # network_mode: "host"
@@ -23,3 +23,6 @@ services:
 
     healthcheck:
       test: mysqladmin ping -h 127.0.0.1 -u user --password=user
+
+volumes:
+  mariadb-persistent:
