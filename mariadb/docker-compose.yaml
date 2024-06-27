@@ -22,4 +22,4 @@ services:
       MYSQL_DATABASE: default_db
 
     healthcheck:
-      test: mysqladmin ping -h 127.0.0.1 -u user --password=
+      test: mysqladmin ping -h 127.0.0.1 -u user --password=user
